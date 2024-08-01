@@ -2,4 +2,5 @@
 [![Actions Status](https://github.com/Tanman515/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Tanman515/python-project-52/actions)
 
 
-[Ссылка на сайт] (https://python-project-52-xjo5.onrender.com)
+### РЎСЃС‹Р»РєР° РЅР° СЃР°Р№С‚:
+(https://python-project-52-xjo5.onrender.com)
