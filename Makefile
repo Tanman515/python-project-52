@@ -5,4 +5,4 @@ install:
 	poetry install
 
 start:
-	poetry run gunicorn --bind 0.0.0.0:8000 task.wsgi
+	poetry run gunicorn task.wsgi:application
