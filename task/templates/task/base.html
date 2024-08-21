@@ -1,0 +1,19 @@
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>{{ title }}</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+	{% include "task/layouts/nav.html" %}
+	{% block content %}
+
+	{% endblock %}
+	{% include "task/layouts/footer.html" %}
+</body>
+</html>

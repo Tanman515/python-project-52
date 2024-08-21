@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>{{ title }}</title>
-</head>
-<body>
-    <h1>Hello Django</h1>
-</body>
-</html>
+{% extends "task/base.html" %}
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+
+{% block content %}
+<div class="container wrapper flex-grow-1">
+    <h1 class="my-4">
+    </h1>
+    <h1 class="my-4"></h1>
+    <div class="card">
+        <div class="card-body p-5 bg-light">
+            <div class="display-4">{% trans "Hello from Hexlet!" %}</div>
+            <p class="lead">{% trans "Practical programming courses" %}</p>
+            <hr>
+            <a class="btn btn-primary btn-lg" href="https://ru.hexlet.io">{% trans "Read more" %}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
