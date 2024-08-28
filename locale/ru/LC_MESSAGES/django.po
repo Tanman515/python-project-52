@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 17:02+1000\n"
+"POT-Creation-Date: 2024-08-23 09:08+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,23 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: task/templates/task/index.html:12
+
+#: task/templates/task/index.html:13
 msgid "Hello from Hexlet!"
 msgstr "Привет от Хекслета!"
 
-#: task/templates/task/index.html:13
+#: task/templates/task/index.html:14
 msgid "Practical programming courses"
 msgstr "Практические курсы по программированию"
 
-#: task/templates/task/index.html:15
+#: task/templates/task/index.html:16
 msgid "Read more"
 msgstr "Узнать больше"
 
-#: task/templates/task/layouts/nav.html:4 task/views.py:10
+#: task/templates/task/layouts/nav.html:5 task/views.py:10
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: task/templates/task/layouts/nav.html:11
+#: task/templates/task/layouts/nav.html:12
+#: task/users/templates/users/list.html:9
 msgid "Users"
 msgstr "Пользователи"
 
@@ -46,3 +48,23 @@ msgstr "Войти"
 #: task/templates/task/layouts/nav.html:21
 msgid "Register"
 msgstr "Регистрация"
+
+#: task/users/templates/users/list.html:17
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: task/users/templates/users/list.html:18
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task/users/templates/users/list.html:19
+msgid "Created date"
+msgstr "Дата создания"
+
+#: task/users/templates/users/list.html:31
+msgid "Change"
+msgstr "Изменить"
+
+#: task/users/templates/users/list.html:33
+msgid "Delete"
+msgstr "Удалить"
