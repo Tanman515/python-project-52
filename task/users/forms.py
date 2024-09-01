@@ -26,10 +26,6 @@ class CreateUserForm(UserCreationForm):
 		fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
 
 
-from django import forms
-from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserChangeForm
-
 class UpdateUserForm(UserChangeForm):
     username = forms.CharField(
         label='Имя пользователя',
