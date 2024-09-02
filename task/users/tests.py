@@ -3,9 +3,6 @@ from django.test import Client
 from django.urls import reverse
 from .models import User
 
-<<<<<<< HEAD
-# Create your tests here.
-=======
 
 class TestCRUD(TestCase):
 
@@ -54,4 +51,3 @@ class TestCRUD(TestCase):
 														  'password1': '123',
 														  'password2': '123'})
 		self.assertEqual(User.objects.filter(pk=1).values()[0]['username'], 'Gena')
->>>>>>> 68de5d0 (adding test)
