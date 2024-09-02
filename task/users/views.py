@@ -5,7 +5,8 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .forms import CreateUserForm, UpdateUserForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from django.http import HttpResponseRedirect
+from task.utils.mixin import CustomLoginRequiredMixin, UserChangeAccessMixin
+
 
 
 class UsersList(ListView):
@@ -21,13 +22,13 @@ class CreateUser(SuccessMessageMixin, CreateView):
 	success_message = "Пользователь успешно зарегистрирован"
 
 
-class DeleteView(DeleteView):
+class DeleteView(CustomLoginRequiredMixin, DeleteView):
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')
 
 
-class UpdateView(SuccessMessageMixin, UpdateView):
+class UpdateView(CustomLoginRequiredMixin, SuccessMessageMixin, UpdateView):
 	model = User
 	form_class = UpdateUserForm
 	template_name = 'users/update.html'
