@@ -4,27 +4,18 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 
+class CustomLoginRequiredMixin(LoginRequiredMixin):
+	def dispatch(self, request, *args, **kwargs):
+		if not request.user.is_authenticated:
+			messages.error(request, 'Вы не залогинены! Пожалуйста, залогиньтесь.')
+			return redirect('login')
+		return super().dispatch(request, *args, **kwargs)
 
-class UserChangeAccessMixin:
 
-    redirect_field_name = None
-
-    def has_permission(self) -> bool:
-        return self.get_object().pk == self.request.user.pk
-
-    def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            messages.error(
-                request,
-                FlashMessages.NO_AUTHENTICATION.value,
-            )
-
-            return self.handle_no_permission()
-
-        elif not self.has_permission():
-            messages.error(
-                request,
-                FlashMessages.NO_PERMIT_TO_CHANGE_USER.value,
-            )
-            return redirect('users')
-        return super().dispatch(request, *args, **kwargs)
+class OwnerRequiredMixin:
+	def dispatch(self, request, *args, **kwargs):
+		user = self.request.user
+		if user.id == int(kwargs.get('pk')):
+			return super().dispatch(request, *args, **kwargs)
+		messages.error(request, 'У вас нет прав для изменения другого пользователя.')
+		return redirect('users')
