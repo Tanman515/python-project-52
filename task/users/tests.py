@@ -8,7 +8,10 @@ class TestCRUD(TestCase):
 
 	def setUp(self):
 		self.client = Client()
-		User.objects.create_user('Oleg', 'asdf@mail.ru', '123')
+		self.user_data = {'username': 'testuser',
+					 'password': 'secret'}
+		User.objects.create_user(**self.user_data)
+		self.client.post(reverse('login'), self.user_data)
 
 
 	def test_create_GET(self):
