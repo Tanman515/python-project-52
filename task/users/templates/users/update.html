@@ -10,7 +10,7 @@
 
 	<h1 class="my-4">
 
-		Изменение пользователя
+		{% trans 'Change user' %}
 
 	</h1>
 	<form method='post'>
@@ -21,7 +21,7 @@
     		{% endif %}
 		{% endfor %}
 
-		<input class="btn btn-primary" type="submit" value="Обновить">
+		<input class="btn btn-primary" type="submit" value="{% trans 'Change' %}">
 	</form>
 </div>
 {% endblock %}

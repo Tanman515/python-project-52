@@ -6,6 +6,7 @@ from .forms import CreateUserForm, UpdateUserForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from task.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin
+from django.utils.translation import gettext as _
 
 
 
@@ -19,7 +20,7 @@ class CreateUser(SuccessMessageMixin, CreateView):
 	form_class = CreateUserForm
 	template_name = 'users/register.html'
 	success_url = reverse_lazy('login')
-	success_message = "Пользователь успешно зарегистрирован"
+	success_message = _('User successfully registered')
 
 
 class DeleteView(CustomLoginRequiredMixin, OwnerRequiredMixin, DeleteView):
@@ -33,4 +34,4 @@ class UpdateView(CustomLoginRequiredMixin, OwnerRequiredMixin, SuccessMessageMix
 	form_class = UpdateUserForm
 	template_name = 'users/update.html'
 	success_url = reverse_lazy('users')
-	success_message = "Пользователь успешно изменён"
+	success_message = _("User successfully changed")

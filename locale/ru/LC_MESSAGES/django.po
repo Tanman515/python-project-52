@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 09:08+1000\n"
+"POT-Creation-Date: 2024-09-06 20:22+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,51 +20,167 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: task/templates/task/index.html:13
-msgid "Hello from Hexlet!"
-msgstr "Привет от Хекслета!"
-
-#: task/templates/task/index.html:14
-msgid "Practical programming courses"
-msgstr "Практические курсы по программированию"
-
-#: task/templates/task/index.html:16
-msgid "Read more"
-msgstr "Узнать больше"
-
-#: task/templates/task/layouts/nav.html:5 task/views.py:10
-msgid "Task manager"
-msgstr "Менеджер задач"
-
-#: task/templates/task/layouts/nav.html:12
-#: task/users/templates/users/list.html:9
-msgid "Users"
-msgstr "Пользователи"
-
-#: task/templates/task/layouts/nav.html:18
-msgid "Sign in"
-msgstr "Войти"
-
-#: task/templates/task/layouts/nav.html:21
-msgid "Register"
-msgstr "Регистрация"
-
-#: task/users/templates/users/list.html:17
-msgid "User name"
-msgstr "Имя пользователя"
-
-#: task/users/templates/users/list.html:18
-msgid "Full name"
-msgstr "Полное имя"
-
-#: task/users/templates/users/list.html:19
-msgid "Created date"
-msgstr "Дата создания"
-
-#: task/users/templates/users/list.html:31
+#: task/statuses/templates/statuses/list.html:31
+#: task/users/templates/users/list.html:33
+#: task/users/templates/users/update.html:24
 msgid "Change"
 msgstr "Изменить"
 
-#: task/users/templates/users/list.html:33
+#: task/statuses/templates/statuses/list.html:33
+#: task/users/templates/users/list.html:35
 msgid "Delete"
 msgstr "Удалить"
+
+#: task/templates/task/base.html:10 task/templates/task/layouts/nav.html:5
+msgid "Task manager"
+msgstr "Менеджер задач"
+
+#: task/templates/task/index.html:12
+msgid "Hello from Hexlet!"
+msgstr "Привет от Хекслета!"
+
+#: task/templates/task/index.html:13
+msgid "Practical programming courses"
+msgstr "Практические курсы по программированию"
+
+#: task/templates/task/index.html:15
+msgid "Read more"
+msgstr "Узнать больше"
+
+#: task/templates/task/layouts/nav.html:12
+#: task/users/templates/users/list.html:11
+msgid "Users"
+msgstr "Пользователи"
+
+#: task/templates/task/layouts/nav.html:16
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task/templates/task/layouts/nav.html:19
+msgid "Marks"
+msgstr "Метки"
+
+#: task/templates/task/layouts/nav.html:22
+msgid "Tasks"
+msgstr "Задачи"
+
+#: task/templates/task/layouts/nav.html:27
+#, fuzzy
+#| msgid "Sign in"
+msgid "Sign out"
+msgstr "Выход"
+
+#: task/templates/task/layouts/nav.html:35 task/templates/task/login.html:17
+msgid "Sign in"
+msgstr "Войти"
+
+#: task/templates/task/layouts/nav.html:38
+#: task/users/templates/users/register.html:13
+#, fuzzy
+#| msgid "Register"
+msgid "Registration"
+msgstr "Регистрация"
+
+#: task/templates/task/login.html:11
+msgid "Login"
+msgstr "Вход"
+
+#: task/users/forms.py:10 task/users/templates/users/list.html:19
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: task/users/forms.py:12 task/users/forms.py:35
+msgid ""
+"Required field. No more than 150 characters. Only letters, numbers and "
+"symbols @/./+/-/_."
+msgstr ""
+"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
+"+/-/_."
+
+#: task/users/forms.py:15 task/users/forms.py:38
+msgid "Password"
+msgstr "Пароль"
+
+#: task/users/forms.py:17 task/users/forms.py:40
+msgid "Your password must contain at least 3 characters."
+msgstr "Ваш пароль должен содержать как минимум 3 символа."
+
+#: task/users/forms.py:20 task/users/forms.py:44
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+#: task/users/forms.py:22 task/users/forms.py:46
+msgid "To confirm, please enter your password again."
+msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
+
+#: task/users/forms.py:32
+#, fuzzy
+#| msgid "User name"
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task/users/forms.py:60
+msgid "The passwords do not match."
+msgstr "Пароли не совпадают."
+
+#: task/users/templates/users/delete.html:10
+msgid "Deleting a user"
+msgstr "Удаление пользователя"
+
+#: task/users/templates/users/delete.html:14
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task/users/templates/users/delete.html:17
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: task/users/templates/users/list.html:20
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task/users/templates/users/list.html:21
+msgid "Created date"
+msgstr "Дата создания"
+
+#: task/users/templates/users/register.html:19
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: task/users/templates/users/update.html:13
+#, fuzzy
+#| msgid "Change"
+msgid "Change user"
+msgstr "Изменить пользователя"
+
+#: task/users/views.py:23
+msgid "User successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task/users/views.py:37
+msgid "User successfully changed"
+msgstr "Пользователь успешно изменён"
+
+#: task/utils/mixin.py:11
+msgid "You are not authorized! Please log in."
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task/utils/mixin.py:21
+msgid "You do not have permission to change another user."
+msgstr "У вас нет прав для изменения другого пользователя."
+
+#: task/views.py:15
+msgid "You are sign in"
+msgstr "Вы залогинены"
+
+#: task/views.py:19
+msgid "You are sign out"
+msgstr "Вы разлогинены"
+
+#~ msgid "Вход"
+#~ msgstr "Sign in"
+
+#, fuzzy
+#~| msgid "Task manager"
+#~ msgid "Task Manager"
+#~ msgstr "Менеджер задач"

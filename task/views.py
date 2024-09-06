@@ -12,9 +12,9 @@ class IndexView(TemplateView):
 
 class LoginView(SuccessMessageMixin, LoginView):
     template_name = 'task/login.html'
-    success_message = "Вы залогинены"
+    success_message = _("You are sign in")
 
 class LogoutView(LogoutView):
     def dispatch(self, request, *args, **kwargs):
-        messages.info(request, 'Вы разлогинены')
+        messages.info(request, _('You are sign out'))
         return super().dispatch(request, *args, **kwargs)

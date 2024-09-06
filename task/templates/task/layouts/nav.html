@@ -13,18 +13,18 @@
       </li>
       {% if user.is_authenticated %}
       <li class="nav-item">
-        <a class="nav-link my-auto" href="{% url 'statuses' %}">{% trans "Статусы" %}</a>
+        <a class="nav-link my-auto" href="{% url 'statuses' %}">{% trans "Statuses" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link my-auto" href="/login/">{% trans "Метки" %}</a>
+        <a class="nav-link my-auto" href="/login/">{% trans "Marks" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link my-auto" href="/login/">{% trans "Задачи" %}</a>
+        <a class="nav-link my-auto" href="/login/">{% trans "Tasks" %}</a>
       </li>
       <li class="nav-item">
         <form action="{% url 'logout' %}" method="post" class="d-flex align-items-center my-0 flex-shrink-0">
           {% csrf_token %}
-          <input class="btn nav-link" type="submit" value="Выход">
+          <input class="btn nav-link" type="submit" value="{% trans 'Sign out' %}">
         </form>
       </li>
     </ul>
@@ -35,7 +35,7 @@
         <a class="nav-link" href="{% url 'login' %}">{% trans "Sign in" %}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'register' %}">{% trans "Register" %}</a>
+        <a class="nav-link" href="{% url 'register' %}">{% trans "Registration" %}</a>
       </li>
     </ul>
     {% endif %}
