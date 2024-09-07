@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-06 20:22+1000\n"
+"POT-Creation-Date: 2024-09-07 16:59+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,50 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: task/statuses/forms.py:9 task/statuses/models.py:7
+#: task/statuses/templates/statuses/list.html:19
+msgid "Name"
+msgstr "Имя"
+
+#: task/statuses/templates/statuses/create.html:13
+#: task/statuses/templates/statuses/list.html:14
+#, fuzzy
+#| msgid "Created date"
+msgid "Create status"
+msgstr "Создать статус"
+
+#: task/statuses/templates/statuses/create.html:19
+#, fuzzy
+#| msgid "Created date"
+msgid "Create"
+msgstr "Создать"
+
+#: task/statuses/templates/statuses/delete.html:10
+#, fuzzy
+#| msgid "Created date"
+msgid "Delete status"
+msgstr "Удаление статуса"
+
+#: task/statuses/templates/statuses/delete.html:14
+#: task/users/templates/users/delete.html:14
+msgid "Are you sure you want to delete"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task/statuses/templates/statuses/delete.html:17
+#: task/users/templates/users/delete.html:17
+msgid "Yes, delete"
+msgstr "Да, удалить"
+
+#: task/statuses/templates/statuses/list.html:11
+#: task/templates/task/layouts/nav.html:16
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task/statuses/templates/statuses/list.html:20
+#: task/users/templates/users/list.html:21
+msgid "Created date"
+msgstr "Дата создания"
+
 #: task/statuses/templates/statuses/list.html:31
 #: task/users/templates/users/list.html:33
 #: task/users/templates/users/update.html:24
@@ -30,6 +74,30 @@ msgstr "Изменить"
 #: task/users/templates/users/list.html:35
 msgid "Delete"
 msgstr "Удалить"
+
+#: task/statuses/templates/statuses/update.html:13
+msgid "Update status"
+msgstr "Изменение статуса"
+
+#: task/statuses/templates/statuses/update.html:19
+msgid "Update"
+msgstr "Изменить"
+
+#: task/statuses/views.py:23
+msgid "Status created successfully"
+msgstr "Статус успешно создан"
+
+#: task/statuses/views.py:30
+#, fuzzy
+#| msgid "User successfully registered"
+msgid "Status successfully deleted"
+msgstr "Статус успешно удален"
+
+#: task/statuses/views.py:38
+#, fuzzy
+#| msgid "User successfully changed"
+msgid "Status successfully updated"
+msgstr "Статус успешно изменён"
 
 #: task/templates/task/base.html:10 task/templates/task/layouts/nav.html:5
 msgid "Task manager"
@@ -51,10 +119,6 @@ msgstr "Узнать больше"
 #: task/users/templates/users/list.html:11
 msgid "Users"
 msgstr "Пользователи"
-
-#: task/templates/task/layouts/nav.html:16
-msgid "Statuses"
-msgstr "Статусы"
 
 #: task/templates/task/layouts/nav.html:19
 msgid "Marks"
@@ -127,21 +191,9 @@ msgstr "Пароли не совпадают."
 msgid "Deleting a user"
 msgstr "Удаление пользователя"
 
-#: task/users/templates/users/delete.html:14
-msgid "Are you sure you want to delete"
-msgstr "Вы уверены, что хотите удалить"
-
-#: task/users/templates/users/delete.html:17
-msgid "Yes, delete"
-msgstr "Да, удалить"
-
 #: task/users/templates/users/list.html:20
 msgid "Full name"
 msgstr "Полное имя"
-
-#: task/users/templates/users/list.html:21
-msgid "Created date"
-msgstr "Дата создания"
 
 #: task/users/templates/users/register.html:19
 msgid "Register"
@@ -157,7 +209,13 @@ msgstr "Изменить пользователя"
 msgid "User successfully registered"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task/users/views.py:37
+#: task/users/views.py:30
+#, fuzzy
+#| msgid "User successfully registered"
+msgid "User successfully deleted"
+msgstr "Пользователь успешно удален"
+
+#: task/users/views.py:38
 msgid "User successfully changed"
 msgstr "Пользователь успешно изменён"
 

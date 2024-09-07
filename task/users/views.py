@@ -23,10 +23,11 @@ class CreateUser(SuccessMessageMixin, CreateView):
 	success_message = _('User successfully registered')
 
 
-class DeleteView(CustomLoginRequiredMixin, OwnerRequiredMixin, DeleteView):
+class DeleteView(CustomLoginRequiredMixin, OwnerRequiredMixin, DeleteView, SuccessMessageMixin):
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')
+    success_message = _("User successfully deleted")
 
 
 class UpdateView(CustomLoginRequiredMixin, OwnerRequiredMixin, SuccessMessageMixin, UpdateView):
