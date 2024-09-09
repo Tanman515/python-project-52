@@ -1,0 +1,40 @@
+{% extends "task/base.html" %}
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+
+{% block content %}
+<div class="container wrapper flex-grow-1">
+  {% bootstrap_messages %}
+  <h1 class="my-4">
+
+    {% trans 'Marks' %}
+
+  </h1>
+  <a class="btn btn-primary mb-3" href="{% url 'create_mark' %}">{% trans 'Create mark' %}</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>{% trans 'Name' %}</th>
+        <th>{% trans 'Created date' %}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+{% for mark in marks %}
+      <tr>
+        <td>{{ mark.id }}</td>
+        <td>{{ mark.name }}</td>
+        <td>{{ mark.created_at }}</td>
+        <td>
+          <a href="{% url 'update_mark' mark.id %}">{% trans "Change" %}</a>
+          <br>
+          <a href="{% url 'delete_mark' mark.id %}">{% trans "Delete" %}</a>
+        </td>
+      </tr>
+{% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

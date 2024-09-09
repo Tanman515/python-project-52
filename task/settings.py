@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django_bootstrap5',
     'task.users.apps.UsersConfig',
 	'task.statuses.apps.StatusesConfig',
+    'task.marks.apps.MarksConfig',
+    'task.tasks.apps.TasksConfig',
 ]
 
 MIDDLEWARE = [

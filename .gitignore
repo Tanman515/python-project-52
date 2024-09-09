@@ -1,6 +1,3 @@
 .env
 *sqlite3
-*/__pycache__
-task/users/migrations/__pycache__/
-task/users/__pycache__/
-task/utils/__pycache__/
+__pycache__/

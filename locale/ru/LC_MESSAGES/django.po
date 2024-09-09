@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-07 16:59+1000\n"
+"POT-Creation-Date: 2024-09-09 20:36+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,85 +19,112 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-#: task/statuses/forms.py:9 task/statuses/models.py:7
-#: task/statuses/templates/statuses/list.html:19
+#: task/marks/forms.py:9 task/marks/models.py:7
+#: task/marks/templates/marks/list.html:19 task/statuses/forms.py:9
+#: task/statuses/models.py:7 task/statuses/templates/statuses/list.html:19
 msgid "Name"
 msgstr "Имя"
 
-#: task/statuses/templates/statuses/create.html:13
-#: task/statuses/templates/statuses/list.html:14
-#, fuzzy
-#| msgid "Created date"
-msgid "Create status"
-msgstr "Создать статус"
+#: task/marks/templates/marks/create.html:13
+#: task/marks/templates/marks/list.html:14
+msgid "Create mark"
+msgstr "Создать метку"
 
+#: task/marks/templates/marks/create.html:19
 #: task/statuses/templates/statuses/create.html:19
-#, fuzzy
-#| msgid "Created date"
 msgid "Create"
 msgstr "Создать"
 
-#: task/statuses/templates/statuses/delete.html:10
-#, fuzzy
-#| msgid "Created date"
-msgid "Delete status"
-msgstr "Удаление статуса"
+#: task/marks/templates/marks/delete.html:10
+msgid "Delete mark"
+msgstr "Удаление метки"
 
+#: task/marks/templates/marks/delete.html:14
 #: task/statuses/templates/statuses/delete.html:14
 #: task/users/templates/users/delete.html:14
 msgid "Are you sure you want to delete"
 msgstr "Вы уверены, что хотите удалить"
 
+#: task/marks/templates/marks/delete.html:17
 #: task/statuses/templates/statuses/delete.html:17
 #: task/users/templates/users/delete.html:17
 msgid "Yes, delete"
 msgstr "Да, удалить"
 
-#: task/statuses/templates/statuses/list.html:11
-#: task/templates/task/layouts/nav.html:16
-msgid "Statuses"
-msgstr "Статусы"
+#: task/marks/templates/marks/list.html:11
+#: task/templates/task/layouts/nav.html:19
+msgid "Marks"
+msgstr "Метки"
 
+#: task/marks/templates/marks/list.html:20
 #: task/statuses/templates/statuses/list.html:20
 #: task/users/templates/users/list.html:21
 msgid "Created date"
 msgstr "Дата создания"
 
+#: task/marks/templates/marks/list.html:31
 #: task/statuses/templates/statuses/list.html:31
 #: task/users/templates/users/list.html:33
 #: task/users/templates/users/update.html:24
 msgid "Change"
 msgstr "Изменить"
 
+#: task/marks/templates/marks/list.html:33
 #: task/statuses/templates/statuses/list.html:33
 #: task/users/templates/users/list.html:35
 msgid "Delete"
 msgstr "Удалить"
 
-#: task/statuses/templates/statuses/update.html:13
-msgid "Update status"
-msgstr "Изменение статуса"
+#: task/marks/templates/marks/update.html:13
+msgid "Update mark"
+msgstr "Изменение метки"
 
+#: task/marks/templates/marks/update.html:19
 #: task/statuses/templates/statuses/update.html:19
 msgid "Update"
 msgstr "Изменить"
+
+#: task/marks/views.py:22
+msgid "Mark created successfully"
+msgstr ""
+
+#: task/marks/views.py:29
+msgid "Mark successfully deleted"
+msgstr "Метка успешно создана"
+
+#: task/marks/views.py:37
+msgid "Mark successfully updated"
+msgstr "Метка успешно изменена"
+
+#: task/statuses/templates/statuses/create.html:13
+#: task/statuses/templates/statuses/list.html:14
+msgid "Create status"
+msgstr "Создать статус"
+
+#: task/statuses/templates/statuses/delete.html:10
+msgid "Delete status"
+msgstr "Удаление статуса"
+
+#: task/statuses/templates/statuses/list.html:11
+#: task/templates/task/layouts/nav.html:16
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task/statuses/templates/statuses/update.html:13
+msgid "Update status"
+msgstr "Изменение статуса"
 
 #: task/statuses/views.py:23
 msgid "Status created successfully"
 msgstr "Статус успешно создан"
 
 #: task/statuses/views.py:30
-#, fuzzy
-#| msgid "User successfully registered"
 msgid "Status successfully deleted"
 msgstr "Статус успешно удален"
 
 #: task/statuses/views.py:38
-#, fuzzy
-#| msgid "User successfully changed"
 msgid "Status successfully updated"
-msgstr "Статус успешно изменён"
+msgstr "Статус успешно изменен"
 
 #: task/templates/task/base.html:10 task/templates/task/layouts/nav.html:5
 msgid "Task manager"
@@ -120,34 +147,26 @@ msgstr "Узнать больше"
 msgid "Users"
 msgstr "Пользователи"
 
-#: task/templates/task/layouts/nav.html:19
-msgid "Marks"
-msgstr "Метки"
-
 #: task/templates/task/layouts/nav.html:22
 msgid "Tasks"
 msgstr "Задачи"
 
 #: task/templates/task/layouts/nav.html:27
-#, fuzzy
-#| msgid "Sign in"
 msgid "Sign out"
 msgstr "Выход"
 
 #: task/templates/task/layouts/nav.html:35 task/templates/task/login.html:17
 msgid "Sign in"
-msgstr "Войти"
+msgstr "Вход"
 
 #: task/templates/task/layouts/nav.html:38
 #: task/users/templates/users/register.html:13
-#, fuzzy
-#| msgid "Register"
 msgid "Registration"
 msgstr "Регистрация"
 
 #: task/templates/task/login.html:11
 msgid "Login"
-msgstr "Вход"
+msgstr "Войти"
 
 #: task/users/forms.py:10 task/users/templates/users/list.html:19
 msgid "User name"
@@ -157,9 +176,7 @@ msgstr "Имя пользователя"
 msgid ""
 "Required field. No more than 150 characters. Only letters, numbers and "
 "symbols @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: task/users/forms.py:15 task/users/forms.py:38
 msgid "Password"
@@ -178,14 +195,12 @@ msgid "To confirm, please enter your password again."
 msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
 
 #: task/users/forms.py:32
-#, fuzzy
-#| msgid "User name"
 msgid "Username"
 msgstr "Имя пользователя"
 
 #: task/users/forms.py:60
 msgid "The passwords do not match."
-msgstr "Пароли не совпадают."
+msgstr "Введенные пароли не совпадают."
 
 #: task/users/templates/users/delete.html:10
 msgid "Deleting a user"
@@ -197,27 +212,23 @@ msgstr "Полное имя"
 
 #: task/users/templates/users/register.html:19
 msgid "Register"
-msgstr "Зарегистрировать"
+msgstr "Регистрация"
 
 #: task/users/templates/users/update.html:13
-#, fuzzy
-#| msgid "Change"
 msgid "Change user"
-msgstr "Изменить пользователя"
+msgstr "Изменение пользователя"
 
 #: task/users/views.py:23
 msgid "User successfully registered"
 msgstr "Пользователь успешно зарегистрирован"
 
 #: task/users/views.py:30
-#, fuzzy
-#| msgid "User successfully registered"
 msgid "User successfully deleted"
 msgstr "Пользователь успешно удален"
 
 #: task/users/views.py:38
 msgid "User successfully changed"
-msgstr "Пользователь успешно изменён"
+msgstr "Пользователь успешно изменен"
 
 #: task/utils/mixin.py:11
 msgid "You are not authorized! Please log in."
@@ -234,11 +245,3 @@ msgstr "Вы залогинены"
 #: task/views.py:19
 msgid "You are sign out"
 msgstr "Вы разлогинены"
-
-#~ msgid "Вход"
-#~ msgstr "Sign in"
-
-#, fuzzy
-#~| msgid "Task manager"
-#~ msgid "Task Manager"
-#~ msgstr "Менеджер задач"
