@@ -86,11 +86,11 @@ msgstr "Изменить"
 
 #: task/marks/views.py:22
 msgid "Mark created successfully"
-msgstr ""
+msgstr "Метка успешно создана"
 
 #: task/marks/views.py:29
 msgid "Mark successfully deleted"
-msgstr "Метка успешно создана"
+msgstr "Метка успешно удалена"
 
 #: task/marks/views.py:37
 msgid "Mark successfully updated"
