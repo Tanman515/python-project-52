@@ -21,8 +21,12 @@ class CreateTaskView(CustomLoginRequiredMixin, SuccessMessageMixin, CreateView):
 	success_url = reverse_lazy('tasks')
 	success_message = _("Task created successfully")
 
+	def form_valid(self, form):
+		form.instance.author = self.request.user
+		return super().form_valid(form)
 
-class DeleteTaskView(SuccessMessageMixin, CustomLoginRequiredMixin, DeleteView):
+
+class DeleteTaskView(OwnerRequiredMixin, SuccessMessageMixin, CustomLoginRequiredMixin, DeleteView):
     model = Task
     template_name = 'tasks/delete.html'
     success_url = reverse_lazy('tasks')

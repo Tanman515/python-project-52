@@ -25,7 +25,7 @@
       </tr>
     </thead>
     <tbody>
-{% for task in tasks %}
+      {% for task in tasks %}
       <tr>
         <td>{{ task.id }}</td>
         <td>{{ task.name }}</td>
@@ -39,7 +39,7 @@
           <a href="{% url 'delete_task' task.id %}">{% trans "Delete" %}</a>
         </td>
       </tr>
-{% endfor %}
+      {% endfor %}
     </tbody>
   </table>
 </div>
