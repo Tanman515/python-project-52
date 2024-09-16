@@ -28,6 +28,8 @@ class DeleteView(CustomLoginRequiredMixin, OwnerRequiredMixin, ProtectedErrorHan
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')
     success_message = _("User successfully deleted")
+    permission_error_message = _('You do not have permission to change another user')
+    protected_error_message = _('Cannot delete this object because it is in use')
 
 
 class UpdateView(CustomLoginRequiredMixin, OwnerRequiredMixin, SuccessMessageMixin, UpdateView):

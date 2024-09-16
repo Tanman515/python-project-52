@@ -1,6 +1,6 @@
 from django.views.generic.list import ListView
 from .models import Mark
-from django.views.generic.edit import CreateView, DeleteView, UpdateView 
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .forms import MarkForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy

@@ -11,6 +11,7 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
         fields = ['name', 'description', 'status', 'executor', 'label']
+        labels = {'name': _('Name'),'description': _('Description'),'status': _('Status'),'executor': _('Executor'),'label': _('Labels'),}
         widgets = {
-            'labels': forms.SelectMultiple,
+            'label': forms.SelectMultiple,
         }
