@@ -31,6 +31,8 @@ class DeleteTaskView(OwnerRequiredMixin, SuccessMessageMixin, CustomLoginRequire
     template_name = 'tasks/delete.html'
     success_url = reverse_lazy('tasks')
     success_message = _('Task successfully deleted')
+    error_message = 'Only its author can delete a task'
+    object_attr = 'author'
 
 
 class UpdateTaskView(CustomLoginRequiredMixin, SuccessMessageMixin, UpdateView):
