@@ -4,8 +4,6 @@ from django.utils.translation import gettext as _
 
 
 class Task(models.Model):
-	class Meta:
-		unique_together = ('author', 'executor')
 
 	name = models.CharField(max_length=255, verbose_name=_('Name'))
 	description = models.TextField()
