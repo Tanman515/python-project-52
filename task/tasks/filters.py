@@ -1,6 +1,7 @@
 import django_filters
 from .models import Task
 from task.users.models import User
+from task.statuses.models import Status
 from task.marks.models import Mark
 from django import forms
 from django.utils.translation import gettext_lazy as _
@@ -16,14 +17,14 @@ class TaskFilter(django_filters.FilterSet):
         queryset=User.objects.order_by('id'),
         widget=forms.Select(attrs={'class': 'form-select mr-3 ml-2'})
     )
-    labels = django_filters.ModelChoiceFilter(
+    label = django_filters.ModelChoiceFilter(
         label=_('Label'),
         queryset=Mark.objects.order_by('id'),
         widget=forms.Select(attrs={'class': 'form-select mr-3 ml-2'})
     )
     self_tasks = django_filters.BooleanFilter(
         label=_('Only your tasks'),
-        method='filter_self_tasks',
+        method='owner_tasks_filter',
         widget=forms.CheckboxInput(attrs={'class': 'mr-3'}),
         required=False
     )
@@ -33,10 +34,10 @@ class TaskFilter(django_filters.FilterSet):
         fields = {
             'status': ['exact'],
             'executor': ['exact'],
-            'labels': ['exact'],
+            'label': ['exact'],
         }
 
-    def filter_self_tasks(self, queryset, name, value):
+    def owner_tasks_filter(self, queryset, name, value):
         if value:
             return queryset.filter(author=self.request.user)
         return queryset

@@ -12,6 +12,15 @@
 
   </h1>
   <a class="btn btn-primary mb-3" href="{% url 'create_task' %}">{% trans 'Create task' %}</a>
+  <div class="card mb-3">
+    <div class="card-body bg-light">
+        <form method="get" class="form-inline center">
+            {% bootstrap_form filter.form %}
+            {% trans "Show" as show_text %}
+            <input class="btn btn-primary" type="submit" value="{{ show_text }}">
+        </form>
+    </div>
+</div>
   <table class="table table-striped">
     <thead>
       <tr>
