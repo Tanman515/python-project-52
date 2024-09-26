@@ -276,7 +276,7 @@ msgstr "Полное имя"
 
 #: task/users/templates/users/register.html:19
 msgid "Register"
-msgstr "Регистрация"
+msgstr "Зарегистрировать"
 
 #: task/users/templates/users/update.html:13
 msgid "Change user"
