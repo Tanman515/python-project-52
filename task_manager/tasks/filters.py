@@ -1,8 +1,8 @@
 import django_filters
 from .models import Task
-from task.users.models import User
-from task.statuses.models import Status
-from task.marks.models import Mark
+from task_manager.users.models import User
+from task_manager.statuses.models import Status
+from task_manager.marks.models import Mark
 from django import forms
 from django.utils.translation import gettext_lazy as _
 

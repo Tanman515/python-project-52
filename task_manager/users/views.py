@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .forms import CreateUserForm, UpdateUserForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from task.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin, ProtectedErrorHandlingMixin
+from task_manager.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin, ProtectedErrorHandlingMixin
 from django.utils.translation import gettext as _
 
 

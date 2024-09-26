@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
-    'task.users.apps.UsersConfig',
-    'task.statuses.apps.StatusesConfig',
-    'task.marks.apps.MarksConfig',
-    'task.tasks.apps.TasksConfig',
+    'task_manager.users.apps.UsersConfig',
+    'task_manager.statuses.apps.StatusesConfig',
+    'task_manager.marks.apps.MarksConfig',
+    'task_manager.tasks.apps.TasksConfig',
 ]
 
 MIDDLEWARE = [
@@ -59,12 +59,12 @@ MIDDLEWARE = [
     'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
 
-ROOT_URLCONF = 'task.urls'
+ROOT_URLCONF = 'task_manager.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'task' / 'templates'],
+        'DIRS': [BASE_DIR / 'task_manager' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'task.wsgi.application'
+WSGI_APPLICATION = 'task_manager.wsgi.application'
 
 
 # Database

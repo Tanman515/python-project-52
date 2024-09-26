@@ -1,7 +1,7 @@
 from django import forms
 from .models import Task
 from django.utils.translation import gettext as _
-from task.marks.models import Mark
+from task_manager.marks.models import Mark
 
 
 

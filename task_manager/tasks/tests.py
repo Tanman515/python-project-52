@@ -1,9 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
-from task.tasks.models import Task
-from task.statuses.models import Status
-from task.marks.models import Mark
+from task_manager.tasks.models import Task
+from task_manager.statuses.models import Status
+from task_manager.marks.models import Mark
 
 
 class TaskTests(TestCase):

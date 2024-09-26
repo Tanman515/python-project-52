@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class StatusesConfig(AppConfig):
+class MarksConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'task.statuses'
+    name = 'task_manager.marks'

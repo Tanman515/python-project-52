@@ -22,10 +22,10 @@ from .views import IndexView, LoginView, LogoutView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
-    path('users/', include('task.users.urls')),
+    path('users/', include('task_manager.users.urls')),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-	path('statuses/', include('task.statuses.urls')),
-    path('labels/', include('task.marks.urls')),
-    path('tasks/', include('task.tasks.urls')),
+	path('statuses/', include('task_manager.statuses.urls')),
+    path('labels/', include('task_manager.marks.urls')),
+    path('tasks/', include('task_manager.tasks.urls')),
 ]

@@ -4,7 +4,7 @@ from django.views.generic import CreateView, DeleteView, UpdateView, DetailView
 from .forms import TaskForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from task.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin
+from task_manager.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin
 from django.utils.translation import gettext as _
 from .filters import TaskFilter
 from django_filters.views import FilterView
