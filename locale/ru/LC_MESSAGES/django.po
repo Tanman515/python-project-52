@@ -94,7 +94,7 @@ msgstr "Обновление метки"
 #: task_manager/tasks/templates/tasks/detail.html:46
 #: task_manager/tasks/templates/tasks/update.html:19
 msgid "Update"
-msgstr "Обновить"
+msgstr "Изменить"
 
 #: task_manager/marks/views.py:24
 msgid "Mark created successfully"
