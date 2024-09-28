@@ -260,7 +260,7 @@ msgstr "Регистрация"
 #: task_manager/templates/task/login.html:11
 #: task_manager/templates/task/login.html:17
 msgid "Login"
-msgstr "Вход"
+msgstr "Войти"
 
 #: task_manager/users/forms.py:10
 #: task_manager/users/templates/users/list.html:19
