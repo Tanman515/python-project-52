@@ -60,7 +60,7 @@ msgstr "Да, удалить"
 #: task_manager/marks/templates/marks/list.html:11
 #: task_manager/templates/task/layouts/nav.html:19
 msgid "Marks"
-msgstr "Задачи"
+msgstr "Метки"
 
 #: task_manager/marks/templates/marks/list.html:20
 #: task_manager/statuses/templates/statuses/list.html:20
