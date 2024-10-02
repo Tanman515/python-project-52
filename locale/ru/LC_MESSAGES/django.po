@@ -157,7 +157,7 @@ msgstr "Исполнитель"
 #: task_manager/tasks/filters.py:21
 #: task_manager/tasks/templates/tasks/detail.html:35
 msgid "Label"
-msgstr "Метка"
+msgstr "Метки"
 
 #: task_manager/tasks/filters.py:26
 msgid "Only your tasks"
