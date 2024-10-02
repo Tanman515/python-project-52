@@ -17,7 +17,7 @@ class TaskFilter(django_filters.FilterSet):
         queryset=User.objects.order_by('id'),
         widget=forms.Select(attrs={'class': 'form-select mr-3 ml-2'})
     )
-    label = django_filters.ModelChoiceFilter(
+    labels = django_filters.ModelChoiceFilter(
         label=_('Label'),
         queryset=Mark.objects.order_by('id'),
         widget=forms.Select(attrs={'class': 'form-select mr-3 ml-2'})
@@ -34,7 +34,7 @@ class TaskFilter(django_filters.FilterSet):
         fields = {
             'status': ['exact'],
             'executor': ['exact'],
-            'label': ['exact'],
+            'labels': ['exact'],
         }
 
     def owner_tasks_filter(self, queryset, name, value):

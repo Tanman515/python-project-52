@@ -9,4 +9,4 @@ class MarkForm(forms.ModelForm):
     name = forms.CharField(label=_('Name'), max_length=100)
     class Meta:
         model = Mark
-        fields = ['name',]
+        fields = ['name']
