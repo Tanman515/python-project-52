@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .forms import StatusForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from task_manager.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin
+from task_manager.utils.mixin import CustomLoginRequiredMixin, OwnerRequiredMixin, ProtectedErrorHandlingMixin
 from django.utils.translation import gettext as _
 
 
@@ -23,11 +23,12 @@ class CreateStatusView(CustomLoginRequiredMixin, SuccessMessageMixin, CreateView
 	success_message = _("Status created successfully")
 
 
-class DeleteStatusView(SuccessMessageMixin, CustomLoginRequiredMixin, DeleteView):
+class DeleteStatusView(CustomLoginRequiredMixin, ProtectedErrorHandlingMixin, SuccessMessageMixin, DeleteView):
     model = Status
     template_name = 'statuses/delete.html'
     success_url = reverse_lazy('statuses')
     success_message = _('Status successfully deleted')
+    protected_error_message = _('Cannot delete status because it is in use')
 
 
 class UpdateStatusView(CustomLoginRequiredMixin, SuccessMessageMixin, UpdateView):
