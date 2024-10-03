@@ -1,30 +1,30 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth import get_user_model
 from django import forms
 from django.utils.translation import gettext as _
 
 
-
 class CreateUserForm(UserCreationForm):
-	username = forms.CharField(
-		label=_('User name'),
-		max_length=150,
-		help_text = _('Required field. No more than 150 characters. Only letters, numbers and symbols @/./+/-/_.')
-	)
-	password1 = forms.CharField(
-		label=_('Password'),
-		widget=forms.PasswordInput(),
-		help_text=_('Your password must contain at least 3 characters.')
-	)
-	password2 = forms.CharField(
-		label=_('Password confirmation'),
-		widget=forms.PasswordInput(),
-		help_text=_('To confirm, please enter your password again.'))
-	usable_password = None
+    username = forms.CharField(
+        label=_('User name'),
+        max_length=150,
+        help_text = _('Required field. No more than 150 characters. Only letters, numbers and symbols @/./+/-/_.') # noqa
+    )
+    password1 = forms.CharField(
+        label=_('Password'),
+        widget=forms.PasswordInput(),
+        help_text=_('Your password must contain at least 3 characters.')
+    )
+    password2 = forms.CharField(
+        label=_('Password confirmation'),
+        widget=forms.PasswordInput(),
+        help_text=_('To confirm, please enter your password again.')
+    )
+    usable_password = None
 
-	class Meta:
-		model = get_user_model()
-		fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
+    class Meta:
+        model = get_user_model()
+        fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
 
 
 class UpdateUserForm(UserChangeForm):
@@ -32,7 +32,7 @@ class UpdateUserForm(UserChangeForm):
         label=_('Username'),
         widget=forms.TextInput(),
         max_length=150,
-        help_text = _('Required field. No more than 150 characters. Only letters, numbers and symbols @/./+/-/_.')
+        help_text = _('Required field. No more than 150 characters. Only letters, numbers and symbols @/./+/-/_.') # noqa
     )
     password1 = forms.CharField(
         label=_('Password'),

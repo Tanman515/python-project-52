@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Task
 
+
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
 
@@ -8,7 +9,7 @@ class TaskAdmin(admin.ModelAdmin):
 
         if not change:
             obj.author = request.user
-    
+
         super(TaskAdmin, self).save_model(
             request=request,
             obj=obj,
