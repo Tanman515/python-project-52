@@ -1,0 +1,39 @@
+name: main
+
+on: 
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+           python-version: 3.10.x
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+      - name: Build project
+        run: |
+          source .venv/bin/activate
+          python3 manage.py collectstatic --no-input
+          python3 manage.py migrate
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v5
+        env:
+            SECRET_KEY: "1234"
+            DATABASE_URL: postgres://postgres:postgres@127.0.0.1:5432/task_manager_action
+            CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: make test-coverage
+      - name: Lint
+        run: poetry run flake8 task_manager
