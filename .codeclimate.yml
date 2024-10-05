@@ -1,0 +1,2 @@
+exclude_patterns:
+  - 'task_manager/marks/tests.py'
